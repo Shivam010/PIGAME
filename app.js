@@ -15,7 +15,6 @@ newGame();
 
 document.querySelector('.btn-roll').addEventListener('click', rollDice)
 document.addEventListener('keydown', function(event){
-	console.log(event.code)
 	if(event.code === "KeyR") {
 		rollDice();
 	}
@@ -23,7 +22,6 @@ document.addEventListener('keydown', function(event){
 
 document.querySelector('.btn-hold').addEventListener('click', changePlayer);
 document.addEventListener('keydown', function(event){
-	console.log(event.code)
 	if(event.code === "KeyH") {
 		changePlayer();
 	}
@@ -31,14 +29,13 @@ document.addEventListener('keydown', function(event){
 
 document.querySelector('.btn-new').addEventListener('click', newGame);
 document.addEventListener('keydown', function(event){
-	console.log(event.code)
 	if(event.code === "KeyN") {
 		newGame();
 	}
 });
 
 document.getElementById('limit').addEventListener('keydown', function (event) {
-	if(event.code === "Enter") {
+	if(event.code === "Enter" || event.code === "NumpadEnter") {
 		scoreLimit = Number(document.getElementById('limit').value);
 		document.getElementById('limit').value = null;
 		document.getElementById('limit').style.display = 'none';
