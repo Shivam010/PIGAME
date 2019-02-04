@@ -35,7 +35,7 @@ document.addEventListener('keydown', function(event){
 });
 
 document.getElementById('limit').addEventListener('keydown', function (event) {
-	if(event.code === "Enter") {
+	if(event.code === "Enter" || event.code === "NumpadEnter") {
 		scoreLimit = Number(document.getElementById('limit').value);
 		document.getElementById('limit').value = null;
 		document.getElementById('limit').style.display = 'none';
